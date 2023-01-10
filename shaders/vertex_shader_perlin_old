@@ -1,0 +1,40 @@
+/*
+#version 330 core
+layout (location = 0) in vec2 aPos;
+
+
+
+
+uniform float a_perlin_size;
+uniform float z_slice;
+
+
+out float perlin_size;
+out float z;
+
+
+void main()
+{
+
+
+     z = (z_slice/a_perlin_size)*2-1;
+    perlin_size = a_perlin_size;
+
+   
+    gl_Position =vec4(aPos.x,aPos.y,0.0f, 1.0);
+} 
+
+*/
+
+
+
+#version 330 core
+layout (location = 0) in vec2 aPos;
+
+
+
+
+void main()
+{
+    gl_Position =vec4(aPos.x,aPos.y,0.0f, 1.0);
+} 

@@ -1,0 +1,31 @@
+#version 330 core
+out vec4 FragColor;
+in vec2 Tex;
+
+
+uniform sampler3D Texture;
+uniform float get_current_state;
+float get(vec3 pos)
+{
+return  1.0f -pos.x*pos.x-pos.z*pos.z-pos.y*pos.y;
+}
+void main()
+{
+/*
+if (texture(Texture, Tex).r!=1.0f)
+{
+FragColor = vec4(1.0f,0.0f,0.0f,0.0f);
+}
+else
+{
+//FragColor = vec4(texture(Texture, Tex).r,texture(Texture, Tex).r,texture(Texture, Tex).r,1.0);
+
+}
+ */   //         1       2             3        3 2       1
+ FragColor = vec4(  texture(Texture,vec3(Tex,get_current_state)).rgb         ,1.0f);
+// FragColor = vec4(  vec3(get(vec3(Tex,get_current_state)))    ,1.0f);
+//  FragColor = vec4(texture(Texture, Tex).rgb,1.0);
+
+ 
+
+}

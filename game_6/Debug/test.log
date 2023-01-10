@@ -1,0 +1,36 @@
+﻿  main.cpp
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(70,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(73,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(94,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(118,18): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(127,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(129,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(133,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(136,33): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(142,30): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(147,45): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(161,17): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(163,17): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(165,19): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(173,3): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(180,3): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(187,3): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(194,3): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(201,3): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\AnimateModelClass.h(208,3): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\Voxel_3D_Graph.h(35,62): warning C4244: 'argument': conversion from 'unsigned int' to 'GLfloat', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\Voxel_3D_Graph.h(71,59): warning C4244: 'argument': conversion from 'unsigned int' to 'GLfloat', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\perlin_noise.h(159,65): warning C4244: 'argument': conversion from 'unsigned int' to 'GLfloat', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\game.h(126,17): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\game.h(130,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\game.h(143,17): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\game.h(167,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Header\game.h(178,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\main.cpp(49,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\main.cpp(72,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\main.cpp(73,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\main.cpp(76,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\main.cpp(76,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\main.cpp(77,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\main.cpp(78,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  test.vcxproj -> C:\Users\yummy\Desktop\opengl_shit\projects\project_test\game_6\Debug\test.exe

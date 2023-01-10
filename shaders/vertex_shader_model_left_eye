@@ -1,0 +1,54 @@
+#version 330 core
+layout (location = 0) in vec3 aPos;
+layout (location = 1) in vec3 aNorm;
+layout (location = 2) in vec2 aTex;
+
+
+
+out vec4 FragPos;
+out vec3 Normal;
+out vec2 Tex;
+out vec3 ViewPos;
+
+uniform float eye_distance;
+
+layout (std140) uniform Matrices
+{
+    mat4 model;
+    mat4 view;
+    mat4 projection;
+};
+
+
+
+
+
+
+void main()
+{
+mat4 left_add= mat4(0.0f,0.0f,0.0f,0.0f,
+                     0.0f,0.0f,0.0f,0.0f,
+                     0.0f,0.0f,0.0f,0.0f,
+                     eye_distance/2.0f,0.0f,0.0f,0.0f);
+mat4 view_left = view+left_add;
+
+float left_fix = (eye_distance)*(projection[0][0])/(2*0.1);//0.1= n, near plane
+
+left_add= mat4(0.0f,0.0f,0.0f,0.0f,
+                0.0f,0.0f,0.0f,0.0f,
+                left_fix,0.0f,0.0f,0.0f,
+                 0.0f,0.0f,0.0f,0.0f);
+
+mat4 projection_right = projection+left_add;
+
+    gl_Position =projection_right*view_left*model*vec4(aPos.x,aPos.y,aPos.z, 1.0); 
+    Tex  = aTex;
+    FragPos  = model*vec4(aPos.x,aPos.y,aPos.z, 1.0);
+    
+    Normal =mat3(transpose(inverse(model)))* aNorm;
+    ViewPos = inverse(view)[3].xyz;
+         
+ 
+
+
+} 

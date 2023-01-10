@@ -1,0 +1,79 @@
+/*
+
+#version 330 core
+out vec4 FragColor;
+
+in float perlin_size;
+in float z;
+
+uniform float random_size;
+uniform sampler3D Texture;
+
+vec3 Read_tex(vec3 tex)
+{
+return (texture(Texture,tex/2.0f+0.5f).rgb)-1.0f;
+
+}
+
+float interpolation(float val1,float val2,float ratio)
+{
+return val1 + (10*(ratio*ratio*ratio) -15*(ratio*ratio*ratio*ratio) + 6*(ratio*ratio*ratio*ratio*ratio)) * (val2 - val1);
+}
+
+float get_noise_value(vec3 random,vec3 position,float f_random)
+{
+vec3 ratio = (position - random)*random_size;
+vec3 r1 = vec3(0.0f,0.0f,0.0f);
+vec3 r2 = vec3(f_random,0.0f,0.0f);
+vec3 r3 = vec3(0.0f,f_random,0.0f);
+vec3 r4 = vec3(f_random,f_random,0.0f);
+vec3 r5 = vec3(0.0f,0.0f,f_random);
+vec3 r6 = vec3(f_random,0.0f,f_random);
+vec3 r7 = vec3(0.0f,f_random,f_random);
+vec3 r8 = vec3(f_random,f_random,f_random);
+
+
+float val12 = interpolation(dot(Read_tex(random+r1),position-(random+r1)),dot(Read_tex(random+r2),position-(random+r2)),ratio.x);
+float val34 = interpolation(dot(Read_tex(random+r3),position-(random+r3)),dot(Read_tex(random+r4),position-(random+r4)),ratio.x);
+float val56 = interpolation(dot(Read_tex(random+r5),position-(random+r5)),dot(Read_tex(random+r6),position-(random+r6)),ratio.x);
+float val78 = interpolation(dot(Read_tex(random+r7),position-(random+r7)),dot(Read_tex(random+r8),position-(random+r8)),ratio.x);
+float val1234 = interpolation(val12 ,val34 , ratio.y);
+float val5678 = interpolation(val56 ,val78 , ratio.y);
+float val_12345678 = interpolation(val1234 ,val5678 , ratio.z);
+
+return val_12345678;
+}
+
+void main()
+{
+
+float f_random  = 1.0f/random_size;
+float f_perlin  = 1.0f/perlin_size;
+
+
+
+float tex_random_x  =floor(gl_FragCoord.x/f_random)*f_random;
+float tex_random_y  =floor(gl_FragCoord.y/f_random)*f_random;
+float tex_random_z  =floor(z/f_random)*f_random;
+
+vec3 tex_random = vec3(tex_random_x,tex_random_y,tex_random_z);
+
+
+float noise_value =get_noise_value(tex_random,gl_FragCoord.xyz,f_random);
+
+
+ //FragColor = vec4(noise_value,0.0,0.0,1.0);
+
+ FragColor = vec4(1.0f,0.0,0.0,1.0);
+ 
+ 
+
+}
+*/
+#version 330 core
+out vec4 FragColor;
+
+void main()
+{
+ FragColor = vec4(1.0f,0.0,0.0,1.0);
+ }

@@ -1,0 +1,42 @@
+#version 330 core
+layout (location = 0) in vec3 aPos;
+layout (location = 1) in vec3 aNorm;
+layout (location = 2) in vec3 aMass;
+
+layout (std140) uniform Matrices
+{
+    mat4 model;
+    mat4 view;
+    mat4 projection;
+};
+
+out float color;
+
+uniform float cut;
+uniform float resolution;
+uniform sampler3D Texture;
+
+
+float get(vec3 pos)
+{
+return  1.0f -pos.x*pos.x-pos.z*pos.z-pos.y*pos.y;
+}
+void main()
+{
+    float x = (mod( gl_InstanceID,resolution)-resolution/2.0f)/resolution+1/(2*resolution);
+    float y = (mod( floor(gl_InstanceID/resolution),resolution)-resolution/2.0f)/resolution+1/(2*resolution);
+    float z = (floor(gl_InstanceID/(resolution*resolution))-resolution/2.0f)/resolution+1/(2*resolution);
+    vec3 pos = vec3(x,y,z);
+ 
+        gl_Position =  projection*view*model* vec4(aPos/resolution+pos , 1.0); 
+        if (cut>(pos+aMass/resolution+0.5f).z)
+        {
+        color =texture( Texture,pos+aMass/resolution+0.5f).r;
+       // color=get(pos+aMass/resolution);
+        }
+        else
+        {
+        color = 0.0f;
+        }
+   
+} 

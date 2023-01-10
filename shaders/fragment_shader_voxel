@@ -1,0 +1,25 @@
+#version 330 core
+out vec4 FragColor;
+
+in float color;
+
+
+
+
+void main()
+{
+ if(color<0.2)
+ {
+ discard;
+ }
+ float offset =color;
+
+ float red = pow(cos((0-offset)*3.1415f/2.0f),4);
+  float green = pow(cos((0.5-offset)*3.1415f/2.0f),4);
+ float blue = pow(cos((1.0f-offset)*3.1415f/2.0f),4);
+
+ FragColor = vec4(red,green,blue,1.0);
+ 
+ 
+
+}
